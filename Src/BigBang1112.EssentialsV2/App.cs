@@ -10,11 +10,17 @@ public static class App
 {
     public static void Services(IServiceCollection services, AppOptions options)
     {
+        if (options.Assembly is null)
+        {
+            throw new Exception("Assembly is null");
+        }
+
+        services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = $"{options.Title} API", Version = "v1" });
-
-            c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{services.GetType().Assembly.GetName().Name}.xml"));
+            
+            c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{options.Assembly.GetName().Name}.xml"));
 
             c.CustomSchemaIds(type => type.GetCustomAttribute<SwaggerModelNameAttribute>()?.Name ?? type.Name);
         });
