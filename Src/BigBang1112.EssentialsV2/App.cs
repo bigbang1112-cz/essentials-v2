@@ -18,7 +18,9 @@ public static class App
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = $"{options.Title} API", Version = "v1" });
+            var v = options.ApiVersion ?? "v1";
+
+            c.SwaggerDoc(v, new OpenApiInfo { Title = $"{options.Title} API", Version = v });
             
             c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{options.Assembly.GetName().Name}.xml"));
 

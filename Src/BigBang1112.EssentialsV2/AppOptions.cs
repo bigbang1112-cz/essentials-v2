@@ -6,4 +6,5 @@ public class AppOptions
 {
     public string Title { get; set; } = "EssentialsV2";
     public Assembly? Assembly { get; set; }
+    public string? ApiVersion { get; set; }
 }
