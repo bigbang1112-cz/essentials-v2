@@ -1,5 +1,6 @@
 ﻿using BigBang1112.Attributes;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -8,7 +9,7 @@ namespace BigBang1112;
 
 public static class App
 {
-    public static void Services(IServiceCollection services, AppOptions options)
+    public static void Services(IServiceCollection services, AppOptions options, IConfiguration configuration)
     {
         if (options.Assembly is null)
         {
