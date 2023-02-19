@@ -2,17 +2,17 @@
 
 	<PropertyGroup>
 		<RootNamespace>BigBang1112</RootNamespace>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-	  <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.4.0" />
-	  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
-	  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+	  <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.5.0" />
+	  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+	  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
 	</ItemGroup>
 
 </Project>
