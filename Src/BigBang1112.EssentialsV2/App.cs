@@ -16,6 +16,11 @@ public static class App
             throw new Exception("Assembly is null");
         }
 
+        services.AddRouting(options =>
+        {
+            options.LowercaseUrls = true;
+        });
+
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
         {
